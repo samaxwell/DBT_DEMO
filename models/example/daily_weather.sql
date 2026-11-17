@@ -8,7 +8,6 @@ with daily_weather AS (
         humidity,
         clouds
     from {{ source('demo', 'weather') }}
-    limit 10
 ),
 
 
@@ -27,5 +26,5 @@ daily_weather_agg as (
 )
 
 
-SELECT * FROM daily_weather_agg
+SELECT * FROM daily_weather_agg 
 
